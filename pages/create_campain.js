@@ -10,7 +10,7 @@ const create_campain = () => {
             </div>
 
             {/* List Grid */}
-            <h2 className="text-2xl font-bold text-gray-100 py-8 text-center ">Start Campaign</h2>
+            <h2 className="text-2xl font-bold text-gray-100 py-6 pb-8 text-center ">Start Campaign</h2>
             <div className="container  rounded-md mx-auto p-12 bg-gray-900">
                 <div className="flex gap-8">
                     <div className="w-2/4 pl-12">
@@ -23,6 +23,8 @@ const create_campain = () => {
                     </div>
                 </div>
                 <div className="text p-12">
+                    <label htmlFor="name" className='text-gray-500 font-medium '>Description</label>
+
                     <textarea className='w-full px-4 py-2  rounded-lg focus:border-blue-400 mt-2 outline-none border-[1px] border-gray-700 bg-transparent placeholder:text-gray-300 text-white' ></textarea>
                 </div>
                 <div className="flex gap-8">
@@ -36,6 +38,8 @@ const create_campain = () => {
                     </div>
                 </div>
                 <div className="text p-12">
+                    <label htmlFor="name" className='text-gray-500 font-medium '>Image</label>
+
                     <input type="file" className='w-full px-4 py-2  rounded-lg focus:border-blue-400 mt-2 outline-none border-[1px] border-gray-700 bg-transparent placeholder:text-gray-300 text-white' ></input>
                 </div>
 
