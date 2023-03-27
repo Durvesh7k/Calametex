@@ -1,8 +1,9 @@
+import Link from 'next/link'
 import React from 'react'
 
 const Card = () => {
 return (
-<div class="sm:w-[288px] w-full rounded-[15px] bg-[#1c1c24] cursor-pointer">
+<Link href="/details" class="sm:w-[288px] w-full rounded-[15px] bg-[#1c1c24] cursor-pointer">
     <img src="https://cdn.mos.cms.futurecdn.net/MTNYEyWTNTPURkADAP2p7h.jpg" alt="fund"
         class="w-full h-[158px] object-cover rounded-[15px]" />
     <div class="flex flex-col p-4">    
@@ -34,7 +35,7 @@ return (
                     class="text-[#b2b3bd]">0xc44bfA9310F6DEf90718717cda2768D26855f80c</span></p>
         </div>
     </div>
-</div>
+</Link>
 )
 }
 

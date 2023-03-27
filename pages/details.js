@@ -42,7 +42,7 @@ const details = () => {
 
                             <div className="w-4/6 ">
                                 <h4 class="font-epilogue font-semib
-                                old text-xl mt-8 text-white uppercase">Donators</h4>
+                                old text-xl mt-8 font-bold text-white">Donors</h4>
                                 <div class="mt-[20px] flex flex-col gap-4">
                                     <div class="flex justify-between items-center gap-4">
                                         <p class="font-epilogue font-normal text-[16px] text-[#b2b3bd] leading-[26px] break-ll">
