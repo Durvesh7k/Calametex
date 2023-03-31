@@ -1,7 +1,6 @@
-import React from 'react'
-import Navbar from './components/Navbar'
+import Navbar from "./components/Navbar"
 
-const create_campain = () => {
+const CreateCampain = () => {
     return (
         <div className='min-h-screen pb-12  max-w-screen text-gray-200'>
             {/* Navbar */}
@@ -55,4 +54,4 @@ const create_campain = () => {
     )
 }
 
-export default create_campain
+export default CreateCampain

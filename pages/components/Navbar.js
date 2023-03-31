@@ -1,7 +1,5 @@
-import React from 'react'
 import clamatex from '../assets/logo.jpg'
 import { BiCategory, BiFontSize, BiSun } from "react-icons/bi";
-import { HiOutlineCash,HiOutlineSpeakerphone, HiOutlineUserCircle,HiOutlineLogout, HiSearch, HiLogout } from "react-icons/hi";
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 import Link from 'next/link';
 
