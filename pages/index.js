@@ -4,7 +4,7 @@ import Navbar from './components/Navbar';
 
 export default function Home() {
   return (
-    <div className='min-h-screen max-w-screen text-gray-300'>
+    <div className='min-h-screen max-w-screen bg-gray-100'>
     {/* Navbar */}
     <div className="container mx-auto py-3">
         <Navbar />

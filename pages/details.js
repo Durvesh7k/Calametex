@@ -60,7 +60,7 @@ const Details = () => {
                                 <div className="w-full p-6 rounded-lg bg-blue-200 flex items-center flex-col">
                                         <label htmlFor="name" className='text-gray-900 text-xl text-center my-3 mx-auto font-medium '>Fund for Calamity</label>
                                         <input type="text" className='w-full px-4 py-2  bg-white rounded-lg focus:border-blue-400 mt-2 outline-none border-[1px] border-gray-700 bg-transparent placeholder:text-gray-800 text-gray-900' />
-                                    <button className="bg-blue-400 px-10 py-2 mt-6 w-full mb-5 text-bold text-gray-900 rounded-xl">
+                                    <button className="bg-blue-500 px-10 py-2 mt-6 w-full mb-5 text-bold text-text-200  font-medium text-white rounded-xl">
                                         Submit
                                     </button>
                                 </div>

@@ -14,10 +14,10 @@ const Navbar = () => {
                     <h1 className="text-xl font-bold text-gray-900 ml-2">Calametex</h1>
                 </Link>
                
-                <Link href="/create_campain" className=" rounded-full cursor-pointer py-2 px-2 ml-2 ">
+                <Link href="/CreateCampaign" className=" rounded-full cursor-pointer py-2 px-2 ml-2 ">
                     <p className='text-gray-800 hover:text-blue-400'>NewCampaign </p>
                 </Link>
-                <Link href="/create_campain" className=" rounded-full cursor-pointer py-2 px-2 ml-2 ">
+                <Link href="/MyCampaign" className=" rounded-full cursor-pointer py-2 px-2 ml-2 ">
                     <p className='text-gray-800 hover:text-blue-400'>MyCampaigns </p>
                 </Link>
                 
