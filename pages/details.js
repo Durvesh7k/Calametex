@@ -4,7 +4,7 @@ import Navbar from './components/Navbar'
 const details = () => {
     return (
         <>
-            <div className='min-h-screen max-w-screen bg-gray-800'>
+            <div className='min-h-screen max-w-screen text-gray-200'>
                 {/* Navbar */}
                 <div className="container mx-auto py-3">
                     <Navbar />
@@ -59,7 +59,7 @@ const details = () => {
                             <div className="w-2/6 p-2 mt-16 ml-8">
                                 <div className="w-full p-6 rounded-lg bg-slate-900 flex items-center flex-col">
                                         <label htmlFor="name" className='text-gray-400 text-xl text-center my-3 mx-auto font-medium '>Fund for Calamity</label>
-                                        <input type="text" className='w-full px-4 py-2  rounded-lg focus:border-blue-400 mt-2 outline-none border-[1px] border-gray-700 bg-transparent placeholder:text-gray-300 text-white' />
+                                        <input type="text" className='w-full px-4 py-2  rounded-lg focus:border-blue-400 mt-2 outline-none border-[1px] border-gray-700 bg-transparent placeholder:text-gray-800 text-white' />
                                     <button className="bg-blue-400 px-10 py-2 mt-6 w-full mb-5 text-bold text-white rounded-xl">
                                         Submit
                                     </button>
