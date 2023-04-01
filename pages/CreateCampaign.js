@@ -14,37 +14,37 @@ const CreateCampaign = () => {
                 <div className="flex gap-8">
                     <div className="w-2/4 pl-12">
                         <label htmlFor="name" className='text-gray-800 font-medium '>Your Name</label>
-                        <input type="text" className='w-full px-4 py-2  rounded-lg focus:border-blue-400 mt-2 outline-none border-[1px] border-gray-700 bg-transparent placeholder:text-gray-800 text-white' />
+                        <input type="text" className='w-full px-4 py-2  rounded-lg focus:border-blue-400 mt-2 outline-none border-[1px] border-gray-700 bg-transparent placeholder:text-gray-800 text-black' />
                     </div>
                     <div className="w-2/4 pr-12">
                         <label htmlFor="name" className='text-gray-800 font-medium '>Campaign Title</label>
-                        <input type="text" className='w-full px-4 py-2  rounded-lg focus:border-blue-400 mt-2 outline-none border-[1px] border-gray-700 bg-transparent placeholder:text-gray-800 text-white' />
+                        <input type="text" className='w-full px-4 py-2  rounded-lg focus:border-blue-400 mt-2 outline-none border-[1px] border-gray-700 bg-transparent placeholder:text-gray-800 text-black' />
                     </div>
                 </div>
                 <div className="text p-12">
                     <label htmlFor="name" className='text-gray-800 font-medium '>Description</label>
 
-                    <textarea className='w-full px-4 py-2  rounded-lg focus:border-blue-400 mt-2 outline-none border-[1px] border-gray-700 bg-transparent placeholder:text-gray-800 text-white' ></textarea>
+                    <textarea className='w-full px-4 py-2  rounded-lg focus:border-blue-400 mt-2 outline-none border-[1px] border-gray-700 bg-transparent placeholder:text-gray-800 text-black' ></textarea>
                 </div>
                 <div className="flex gap-8">
                     <div className="w-2/4 pl-12">
                         <label htmlFor="name" className='text-gray-800 font-medium '>Goal</label>
-                        <input type="text" className='w-full px-4 py-2  rounded-lg focus:border-blue-400 mt-2 outline-none border-[1px] border-gray-700 bg-transparent placeholder:text-gray-800 text-white' />
+                        <input type="text" className='w-full px-4 py-2  rounded-lg focus:border-blue-400 mt-2 outline-none border-[1px] border-gray-700 bg-transparent placeholder:text-gray-800 text-black' />
                     </div>
                     <div className="w-2/4 pr-12">
                         <label htmlFor="name" className='text-gray-800 font-medium '>Campaign End Date</label>
-                        <input type="date" className='w-full px-4 py-2  cursor-pointer rounded-lg focus:border-blue-400 mt-2 outline-none border-[1px] border-gray-700 bg-transparent placeholder:text-gray-800 text-white' />
+                        <input type="date" className='w-full px-4 py-2  cursor-pointer rounded-lg focus:border-blue-400 mt-2 outline-none border-[1px] border-gray-700 bg-transparent placeholder:text-gray-800 text-black' />
                     </div>
                 </div>
                 <div className="text p-12 pb-2">
                     <label htmlFor="name" className='text-gray-800 font-medium '>Image</label>
 
-                    <input type="file" className='w-full px-4 py-2  rounded-lg focus:border-blue-400 mt-2 outline-none border-[1px] border-gray-700 bg-transparent placeholder:text-gray-800 text-white' ></input>
+                    <input type="file" className='w-full px-4 py-2  rounded-lg focus:border-blue-400 mt-2 outline-none border-[1px] border-gray-700 bg-transparent placeholder:text-gray-800 text-black' ></input>
                 </div>
 
 
                 <div className="w-full flex items-center p-12">
-                    <button className="btn px-8 py-3 text-xl rounded-lg bg-blue-400 text-white font-bold">
+                    <button className="btn px-8 py-3 text-xl rounded-lg bg-blue-400 text-black font-bold">
                         Submit Campaign
                     </button>
                 </div>

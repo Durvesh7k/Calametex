@@ -41,18 +41,18 @@ const Details = () => {
                         <div className="flex w-full">
 
                             <div className="w-4/6 ">
-                                <h4 class="font-epilogue font-semib
+                                <h4 className="font-epilogue font-semib
                                 old text-xl mt-8 font-bold text-gray-900">Donors</h4>
-                                <div class="mt-[20px] flex flex-col gap-4">
-                                    <div class="flex justify-between items-center gap-4">
-                                        <p class="font-epilogue font-normal text-[16px] text-gray-700 leading-[26px] break-ll">
+                                <div className="mt-[20px] flex flex-col gap-4">
+                                    <div className="flex justify-between items-center gap-4">
+                                        <p className="font-epilogue font-normal text-[16px] text-gray-700 leading-[26px] break-ll">
                                             1. 0x2564c11B42fcCFd2Da75f482223fd8Ee9D0AFa5f</p>
-                                        <p class="font-epilogue font-normal text-[16px] text-gray-700 leading-[26px] break-ll">0.05</p>
+                                        <p className="font-epilogue font-normal text-[16px] text-gray-700 leading-[26px] break-ll">0.05</p>
                                     </div>
-                                    <div class="flex justify-between items-center gap-4">
-                                        <p class="font-epilogue font-normal text-[16px] text-gray-700 leading-[26px] break-ll">
+                                    <div className="flex justify-between items-center gap-4">
+                                        <p className="font-epilogue font-normal text-[16px] text-gray-700 leading-[26px] break-ll">
                                             1. 0x2564c11B42fcCFd2Da75f482223fd8Ee9D0AFa5f</p>
-                                        <p class="font-epilogue font-normal text-[16px] text-gray-700 leading-[26px] break-ll">0.05</p>
+                                        <p className="font-epilogue font-normal text-[16px] text-gray-700 leading-[26px] break-ll">0.05</p>
                                     </div>
                                 </div>
                             </div>
