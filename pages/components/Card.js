@@ -1,9 +1,13 @@
 import Link from 'next/link'
 
 const Card = () => {
+	const data = {
+		name: 'Durvesh',
+		 age: '30'
+	}
 return (
 <div className="relative mx-auto w-full">
-	<Link href="/Details" className="relative inline-block duration-300 ease-in-out transition-transform transform hover:-translate-y-2 w-full">
+	<Link href={{ pathname: '/Details', query:data}} className="relative inline-block duration-300 ease-in-out transition-transform transform hover:-translate-y-2 w-full">
 	  <div className="shadow p-4 rounded-lg bg-white">
 		<div className="flex justify-center relative rounded-lg overflow-hidden h-52">
 		  <div className="transition-transform duration-500 transform ease-in-out hover:scale-110 w-full">

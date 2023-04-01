@@ -1,7 +1,12 @@
 import React from 'react'
 import Navbar from './components/Navbar'
+import { useRouter } from 'next/router'
+
 
 const Details = () => {
+    const router = useRouter();
+
+    const {name, age} = router.query;
     return (
         <>
             <div className='min-h-screen max-w-screen text-gray-800'>
@@ -26,7 +31,7 @@ const Details = () => {
                                 <img className='h-12 w-12 rounded-full '
                                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkDVDRhcwX5vFbA3CJlA1-tyf_2VOG2FwG7w&usqp=CAU"
                                     alt="" />
-                                <h4 className="text-xl ml-4 font-medium text-gray-900">Durvesh CHopade</h4>
+                                <h4 className="text-xl ml-4 font-medium text-gray-900">{name}</h4>
                             </div>
                         </div>
                         <h4 className='text-xl font-bold text-gray-900 my-8'>Description</h4>
