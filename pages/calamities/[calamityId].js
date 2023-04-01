@@ -81,12 +81,11 @@ export default function Calamity() {
 
     useEffect(() => {
         getDonations();
-        console.log(campaignObj.id)
     }, [campaignObj.id, donators])
 
     return (
         <>
-            <div className='min-h-screen max-w-screen text-gray-800'>
+            <div className='min-h-screen max-w-screen home-bg text-gray-800 font-semibold'>
                 {/* Navbar */}
                 <div className="container mx-auto py-3">
                     <Navbar />
@@ -97,18 +96,18 @@ export default function Calamity() {
 
                     <h2 className="text-2xl font-bold mt-8 mb-4 text-center text-gray-700">Campaign - {campaignObj.title} </h2>
                     <div className="flex container flex-col mx-auto w-10/12">
-                        <img src="https://cdn.mos.cms.futurecdn.net/MTNYEyWTNTPURkADAP2p7h.jpg"
+                        <img src={campaignObj.image}
                             className='rounded-lg w-full mx-auto mt-8 max-h-[400px]' alt="img" />
 
 
                         <div className="creator-box">
-                            <h3 className='mt-4 mb-2 text-teal-50 font-bold text-xl'>Creator</h3>
+                            <h3 className='mt-4 mb-2 text-black font-bold text-xl'>Creator</h3>
                             <div className="flex items-center">
                                 <img
                                     className='h-12 w-12 rounded-full '
                                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkDVDRhcwX5vFbA3CJlA1-tyf_2VOG2FwG7w&usqp=CAU"
                                     alt="Image" />
-                                <h4 className="text-xl ml-4 font-medium text-gray-900">Durvesh CHopade</h4>
+                                <h4 className="text-xl ml-4 font-medium text-gray-900">{campaignObj.owner}</h4>
                             </div>
                         </div>
                         <h4 className='text-xl font-bold text-gray-900 my-8'>Description</h4>
@@ -126,10 +125,10 @@ export default function Calamity() {
                                                 donators.map((donator, i) => {
                                                     return (
                                                         <div className="flex justify-between items-center gap-4" key={i}>
-                                                            <p className="font-epilogue font-normal text-[16px] text-gray-700 leading-[26px] break-ll">
+                                                            <p className="font-epilogue font-semibold text-[16px] text-black leading-[26px] break-ll">
                                                                 {i}. {donator}
                                                             </p>
-                                                            <p className="font-epilogue font-normal text-[16px] text-gray-700 leading-[26px] break-ll">
+                                                            <p className="font-epilogue font-bold text-[16px] text-gray-700 leading-[26px] break-ll">
                                                                 {ethers.utils.formatEther(donateAmt[i].toString())}
                                                             </p>
                                                         </div>

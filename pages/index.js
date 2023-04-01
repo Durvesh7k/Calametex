@@ -1,105 +1,30 @@
 import Link from 'next/link';
 import Card from './components/Card';
 import Navbar from './components/Navbar';
-import { useStateContext } from './context';
-import { useState, useEffect } from 'react';
-import { ethers } from 'ethers';
-import { Router, useRouter } from 'next/router';
+import Image from 'next/image';
 
 export default function Home() {
-  const { contractABI, crowdFundAddress, address } = useStateContext();
-  const [campaigns, setCampaigns] = useState([]);
-  const [loading, setLoading] = useState(false);
-  const router = useRouter();
-
-  const getAllCampaigns = async () => {
-    try {
-      setLoading(true);
-      if (window.ethereum) {
-        const provider = new ethers.providers.Web3Provider(window.ethereum);
-        const signer = provider.getSigner();
-        const contract = new ethers.Contract(
-          crowdFundAddress,
-          contractABI,
-          signer
-        )
-
-        const campaigns = await contract.getCampaigns();
-        let campaignClean = [];
-        campaigns.forEach((calamity,i) => {
-          campaignClean.push({
-            id: i,
-            owner: calamity.owner,
-            title: calamity.title,
-            description: calamity.description,
-            target: calamity.target,
-            deadline: calamity.deadline,
-            amountsCollected: calamity.amountCollected,
-            image: calamity.image,
-            donators: calamity.donators,
-            donations: calamity.donations
-          })
-        });
-        setCampaigns(campaignClean)
-        setLoading(false);
-      }
-      else {
-        console.log("Eth object not found")
-      }
-
-    } catch (e) {
-      console.log(e);
-    }
-  }
-  useEffect(() => {
-    getAllCampaigns();
-
-  }, [])
-
-  useEffect(() => {
-    console.log(campaigns)
-  }, [campaigns])
-
-
-
-
   return (
-    <div className='min-h-screen max-w-screen bg-gray-100 font-semibold'>
+    <div className='min-h-screen max-w-screen home-bg'>
       {/* Navbar */}
       <div className="container mx-auto py-3">
         <Navbar />
       </div>
 
       {/* List Grid */}
-      <div className='px-4 container mx-auto'>
+      <div className='px-4 container mt-12 flex flex-col items-center justify-center h-full mx-auto'>
+        <Image src="/assets/home.png" alt="home img" width={400} height={400} />
+        <h1 className="text-center font-extrabold text-4xl text-black">Unite to alleviate, join Clamatex today.</h1>
+        <div className="flex items-center mt-8">
+          <Link href="/Dashboard" class="px-4 mx-4 py-2 bg-blue-500 hover:bg-blue-600 text-white text-sm font-medium rounded-md">
+            Donate Now
+          </Link>
 
-        <h2 className="text-xl font-bold mt-8 mb-4 text-center text-gray-900">All Campaigns (526)</h2>
-        {!loading ? (
-          <div className='grid grid-cols-2 md:grid-cols-4 gap-6'>
-            {
-              campaigns.map((calamity, i) => {
-                return (
-                  <div key={i}>
-                    <Link href={{
-                      pathname: '/calamities/[calamityId]',
-                      query: {
-                        calamityObj: JSON.stringify(calamity),
-                        calamityId: calamity.title
-                      }
-                    }}
-                    >
-                      <Card data={calamity} />
-                    </Link>
-                  </div>
-                )
-              })
-            }
-          </div>
-        ) : (
-          <span>Loading.......</span>
-        )
-        }
-      </div >
-    </div >
+          <Link href="/CreateCampaign" class="px-4 py-2 bg-green-500 hover:bg-green-600 text-white text-sm font-medium rounded-md">
+            Create Campaign  
+          </Link>
+        </div>
+      </div>
+    </div>
   );
 };

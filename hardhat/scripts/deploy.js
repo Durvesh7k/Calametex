@@ -8,7 +8,6 @@ const Main = async() => {
   const crowdFundContract  = await contract.deploy()
   await crowdFundContract.deployed();
 
-
   console.log("The contract is deployed by: ", deployer.address);
   console.log("The contract address is: ", crowdFundContract.address);
 

@@ -36,7 +36,7 @@ contract CrowdFunding {
         return numberOfCampaigns - 1;
     }
 
-    function donateToCampaign(uint256 _id) public payable {
+    function donateToCampaign(uint256 _id, uint256 _amount) public payable {
         uint256 amount = msg.value;
 
         Campaign storage campaign = campaigns[_id];
@@ -44,7 +44,7 @@ contract CrowdFunding {
         campaign.donators.push(msg.sender);
         campaign.donations.push(amount);
 
-        (bool sent,) = payable(campaign.owner).call{value: 1}("");
+        (bool sent,) = campaign.owner.call{value: _amount}("");
 
         if(sent) {
             campaign.amountCollected = campaign.amountCollected + amount;

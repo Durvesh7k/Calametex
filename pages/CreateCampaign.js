@@ -8,6 +8,7 @@ import { useRouter } from 'next/router'
 const CreateCampaign = () => {
 
     const { contractABI, crowdFundAddress,address } = useStateContext();
+    const router =  useRouter();
 
     const publishCampaign = async (data) => {
         try {
@@ -29,6 +30,7 @@ const CreateCampaign = () => {
                     data.image,
                 )
                 pubTx.wait();
+                router.push("/Dashboard")
 
             }
             else {
@@ -38,36 +40,6 @@ const CreateCampaign = () => {
             console.log(e);
         }
     }
-
-    const getAllCampaigns = async() => {
-        try{
-            if (window.ethereum) {
-                const provider = new ethers.providers.Web3Provider(window.ethereum);
-                const signer = provider.getSigner();
-                const contract = new ethers.Contract(
-                    crowdFundAddress,
-                    contractABI,
-                    signer
-                )
-
-                const campaigns = await contract.getCampaigns();
-
-                console.log(campaigns[0]);
-
-            }
-            else {
-                console.log("Eth object not found")
-            }
-
-        } catch(e){
-            console.log(e);
-        }
-    }
-
-    useEffect(()=>{
-        getAllCampaigns();
-    })
-
 
 
     const [data, setData] = useState({
@@ -101,7 +73,7 @@ const CreateCampaign = () => {
 
 
     return (
-        <div className='min-h-screen pb-12  max-w-screen text-black font-semibold'>
+        <div className='min-h-screen pb-12 home-bg  max-w-screen text-black font-semibold'>
             {/* Navbar */}
             <div className="container mx-auto py-3">
                 <Navbar />
@@ -138,7 +110,6 @@ const CreateCampaign = () => {
                     </div>
                     <div className="text p-12 pb-2">
                         <label htmlFor="name" className='text-gray-800 font-medium '>Image</label>
-
                         <input onChange={(e) => handleFormFieldChange('image', e)} type="text" className='w-full px-4 py-2  rounded-lg focus:border-blue-400 mt-2 outline-none border-[1px] border-gray-700 bg-transparent placeholder:text-gray-800 text-black' ></input>
                     </div>
 

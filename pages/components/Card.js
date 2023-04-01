@@ -6,13 +6,13 @@ export default function Card({ data }) {
 				<div className="shadow p-4 rounded-lg bg-white">
 					<div className="flex justify-center relative rounded-lg overflow-hidden h-52">
 						<div className="transition-transform duration-500 transform ease-in-out hover:scale-110 w-full">
-							<img src="https://picsum.photos/300/200" className='border-r-2 ' alt="" />
+							<img src={data.image} className='border-r-2 ' alt="Images" />
 						</div>
 
 						<div className="absolute flex justify-center bottom-0 mb-3">
 							<div className="flex bg-white px-4 py-1 space-x-5 rounded-lg overflow-hidden shadow">
 								<p className="flex items-center font-medium text-gray-800">
-									Total Ask: 1000
+									{data.target.toString()}
 								</p>
 							</div>
 						</div>
