@@ -1,35 +1,30 @@
 import Link from 'next/link';
 import Card from './components/Card';
 import Navbar from './components/Navbar';
+import Image from 'next/image';
 
 export default function Home() {
   return (
-    <div className='min-h-screen max-w-screen bg-gray-100'>
-    {/* Navbar */}
-    <div className="container mx-auto py-3">
+    <div className='min-h-screen max-w-screen home-bg'>
+      {/* Navbar */}
+      <div className="container mx-auto py-3">
         <Navbar />
-    </div>
+      </div>
 
-    {/* List Grid */}
-    <div className='px-4 container mx-auto'>
+      {/* List Grid */}
+      <div className='px-4 container mt-12 flex flex-col items-center justify-center h-full mx-auto'>
+        <Image src="/assets/home.png" alt="home img" width={400} height={400} />
+        <h1 className="text-center font-extrabold text-4xl text-black">Unite to alleviate, join Clamatex today.</h1>
+        <div className="flex items-center mt-8">
+          <Link href="/Dashboard" class="px-4 mx-4 py-2 bg-blue-500 hover:bg-blue-600 text-white text-sm font-medium rounded-md">
+            Donate Now
+          </Link>
 
-        <h2 className="text-xl font-bold mt-8 mb-4 text-center text-gray-900">All Campaigns (526)</h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
+          <Link href="/CreateCampaign" class="px-4 py-2 bg-green-500 hover:bg-green-600 text-white text-sm font-medium rounded-md">
+            Create Campaign  
+          </Link>
         </div>
-        <Link href='/testingpage'>TestOpen</Link>
+      </div>
     </div>
-</div>
   );
 };

@@ -1,4 +1,3 @@
-import clamatex from '../assets/logo.jpg'
 import { BiCategory, BiFontSize, BiSun } from "react-icons/bi";
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 import Link from 'next/link';
@@ -14,6 +13,9 @@ const Navbar = () => {
                     <h1 className="text-xl font-bold text-gray-900 ml-2">Calametex</h1>
                 </Link>
                
+                <Link href="/Dashboard" className=" rounded-full cursor-pointer py-2 px-2 ml-2 ">
+                    <p className='text-gray-800 hover:text-blue-400'>Dashboard </p>
+                </Link>
                 <Link href="/CreateCampaign" className=" rounded-full cursor-pointer py-2 px-2 ml-2 ">
                     <p className='text-gray-800 hover:text-blue-400'>NewCampaign </p>
                 </Link>
