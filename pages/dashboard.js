@@ -5,7 +5,7 @@ import Navbar from './components/Navbar'
 
 const dashboard = () => {
     return (
-        <div className='min-h-screen max-w-screen bg-gray-800'>
+        <div className='min-h-screen max-w-screen text-gray-200'>
             {/* Navbar */}
             <div className="container mx-auto py-3">
                 <Navbar />
