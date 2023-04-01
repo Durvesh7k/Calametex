@@ -1,7 +1,5 @@
-import React from 'react'
 import clamatex from '../assets/logo.jpg'
 import { BiCategory, BiFontSize, BiSun } from "react-icons/bi";
-import { HiOutlineCash,HiOutlineSpeakerphone, HiOutlineUserCircle,HiOutlineLogout, HiSearch, HiLogout } from "react-icons/hi";
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 import Link from 'next/link';
 
@@ -15,22 +13,22 @@ const Navbar = () => {
                     <img src="https://clipground.com/images/helping-hand-icon-png-9.jpg" alt="alt placeholder" className="rounded-full w-8 h-8 inline mx-auto" />
                     <h1 className="text-xl font-bold text-gray-900 ml-2">Calametex</h1>
                 </Link>
-               
+
                 <Link href="/CreateCampaign" className=" rounded-full cursor-pointer py-2 px-2 ml-2 ">
                     <p className='text-gray-800 hover:text-blue-400'>NewCampaign </p>
                 </Link>
-                <Link href="/CreateCampaign" className=" rounded-full cursor-pointer py-2 px-2 ml-2 ">
+                <Link href="/MyCampaign" className=" rounded-full cursor-pointer py-2 px-2 ml-2 ">
                     <p className='text-gray-800 hover:text-blue-400'>MyCampaigns </p>
                 </Link>
-                
+
                 <span className="text-gray-800 cursor-pointer py-2 px-2 ml-2 hover:text-blue-400 rounded-full">
-                   <p>Logout</p>
+                    <p>Logout</p>
                 </span>
-                
+
             </div>
             <span className="hover:text-white cursor-pointer flex items-center relative float-right mr-3">
                 <BiSun size={22} className="text-gray-800 mr-3" />
-                <ConnectButton style={{fontSize:"0.8rem"}} />
+                <ConnectButton style={{ fontSize: "0.8rem" }} />
             </span>
         </div>
     )
