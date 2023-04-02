@@ -11,8 +11,8 @@ import { configureChains, createClient, WagmiConfig, useConnect } from 'wagmi';
 import {filecoinHyperspace, polygonMumbai } from 'wagmi/chains';
 import { alchemyProvider } from 'wagmi/providers/alchemy';
 import { publicProvider } from 'wagmi/providers/public';
-import { StateContextProvider } from './context';
 import Navbar from './components/Navbar';
+import StateContextProvider from './context';
 
 const sphinx = {
   id: 8082,

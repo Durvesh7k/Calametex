@@ -11,7 +11,7 @@ import filecoinContract from "../contractsData/CrowdFunding-Filecoin.json";
 
 const StateContext = createContext();
 
-export const StateContextProvider = ({ children }) => {
+const StateContextProvider = ({ children }) => {
 
     const contractABI = abi.abi;
     const crowdFundAddress = mumbaiContract.address
@@ -34,4 +34,6 @@ export const StateContextProvider = ({ children }) => {
     )
 }
 
-export const useStateContext = () => useContext(StateContext);
+export const  useStateContext = () => useContext(StateContext);
+
+export default StateContextProvider;

@@ -6,7 +6,11 @@ export default function Card({ data }) {
 				<div className="shadow p-4 rounded-lg bg-white">
 					<div className="flex justify-center relative rounded-lg overflow-hidden h-52">
 						<div className="transition-transform duration-500 transform ease-in-out hover:scale-110 w-full">
-							<img src={data.image} className='border-r-2 ' alt="Images" />
+							<img src={data.image != null ? (
+                                data.image
+							) : (
+								"https://static.vecteezy.com/system/resources/previews/001/843/828/non_2x/donate-money-for-charity-design-illustration-isolated-on-white-background-free-vector.jpg"
+							)} className='border-r-2 ' alt="Images" />
 						</div>
 
 						<div className="absolute flex justify-center bottom-0 mb-3">
