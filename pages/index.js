@@ -5,13 +5,9 @@ import Image from 'next/image';
 
 export default function Home() {
   return (
-    <div className='min-h-screen max-w-screen home-bg'>
-      {/* Navbar */}
-      <div className="container mx-auto py-3">
-        <Navbar />
-      </div>
+    <div className='min-h-screen max-w-screen'>
 
-      {/* List Grid */}
+
       <div className='px-4 container mt-12 flex flex-col items-center justify-center h-full mx-auto'>
         <Image src="/assets/home.png" alt="home img" width={400} height={400} />
         <h1 className="text-center font-extrabold text-4xl text-black">Unite to alleviate, join Clamatex today.</h1>

@@ -17,6 +17,7 @@ const Main = async() => {
 
 
 function saveFrontendFiles(contract, name) {
+  const mumbai = "goerli";
   const fs = require("fs");
   const contractsDir = __dirname + "/../../pages/contractsData";
 
@@ -25,7 +26,7 @@ function saveFrontendFiles(contract, name) {
   }
 
   fs.writeFileSync(
-    contractsDir + `/${name}-address.json`,
+    contractsDir + `/${name}-${mumbai}-address.json`,
     JSON.stringify({ address: contract.address }, undefined, 2)
   );
 

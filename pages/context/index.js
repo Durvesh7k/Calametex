@@ -1,9 +1,10 @@
 import React, { useContext, createContext, useState, useEffect } from 'react';
-import { useAccount, useContract, useProvider, useContractWrite, usePrepareContractWrite, useSigner } from 'wagmi';
+import { useAccount, useNetwork} from 'wagmi';
 import { ethers } from 'ethers';
 import { EditionMetadataWithOwnerOutputSchema } from '@thirdweb-dev/sdk';
 import abi from '../contractsData/CrowdFunding.json'
-import contractAddress from "../contractsData/CrowdFunding-address.json";
+import mumbaiContract from "../contractsData/CrowdFunding-mumbai-address.json";
+import filecoinContract from "../contractsData/CrowdFunding-Filecoin.json";
 
 
 
@@ -13,8 +14,10 @@ const StateContext = createContext();
 export const StateContextProvider = ({ children }) => {
 
     const contractABI = abi.abi;
-    const crowdFundAddress = contractAddress.address
-    const {address} = useAccount();
+    const crowdFundAddress = mumbaiContract.address
+    const {address, isConnected} = useAccount();
+    const { chain, chains } = useNetwork();
+
 
 
     return (
@@ -22,7 +25,8 @@ export const StateContextProvider = ({ children }) => {
             value={{
                 contractABI,
                 crowdFundAddress,
-                address
+                address,
+                isConnected
             }}
         >
             {children}

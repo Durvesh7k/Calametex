@@ -5,12 +5,15 @@ import { useStateContext } from './context';
 import { useState, useEffect } from 'react';
 import { ethers } from 'ethers';
 import { Router, useRouter } from 'next/router';
+import useIsMounted from './hooks/useIsMounted';
+import Loading from './components/Loading';
 
 export default function Home() {
-    const { contractABI, crowdFundAddress, address } = useStateContext();
+    const { contractABI, crowdFundAddress, address, isConnected } = useStateContext();
     const [campaigns, setCampaigns] = useState([]);
     const [loading, setLoading] = useState(false);
-    const router = useRouter();
+    const mounted = useIsMounted();
+
 
     const getAllCampaigns = async () => {
         try {
@@ -64,40 +67,45 @@ export default function Home() {
 
 
     return (
-        <div className='min-h-screen max-w-screen home-bg font-semibold'>
-            {/* Navbar */}
-            <div className="container mx-auto py-3">
-                <Navbar />
-            </div>
+        <div className='min-h-screen max-w-screen  font-semibold'>
 
-            {/* List Grid */}
             <div className='px-4 container mx-auto'>
-
-                <h2 className="text-xl font-bold mt-8 mb-4 text-center text-gray-900">All Campaigns (526)</h2>
-                {!loading ? (
-                    <div className='grid grid-cols-2 md:grid-cols-4 gap-6'>
-                        {
-                            campaigns.map((calamity, i) => {
-                                return (
-                                    <div key={i}>
-                                        <Link href={{
-                                            pathname: '/calamities/[calamityId]',
-                                            query: {
-                                                calamityObj: JSON.stringify(calamity),
-                                                calamityId: calamity.title
-                                            }
-                                        }}
-                                        >
-                                            <Card data={calamity} />
-                                        </Link>
+                <h2 className="text-xl font-bold mt-8 mb-4 text-center text-gray-900">All Campaigns ({campaigns.length}) </h2>
+                {mounted &&
+                    <>
+                        {isConnected ? (
+                            <div>
+                                {!loading ? (
+                                    <div className='grid grid-cols-2 md:grid-cols-4 gap-6'>
+                                        {
+                                            campaigns.map((calamity, i) => {
+                                                return (
+                                                    <div key={i}>
+                                                        <Link href={{
+                                                            pathname: '/calamities/[calamityId]',
+                                                            query: {
+                                                                calamityObj: JSON.stringify(calamity),
+                                                                calamityId: calamity.title
+                                                            }
+                                                        }}
+                                                        >
+                                                            <Card data={calamity} />
+                                                        </Link>
+                                                    </div>
+                                                )
+                                            })
+                                        }
                                     </div>
+                                ) : (
+                                    <Loading/>
                                 )
-                            })
-                        }
-                    </div>
-                ) : (
-                    <span>Loading.......</span>
-                )
+                                }
+                            </div>
+                        ) : (
+                            <span>Connecting....</span>
+                        )}
+
+                    </>
                 }
             </div >
         </div >

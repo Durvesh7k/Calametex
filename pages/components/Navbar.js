@@ -17,15 +17,11 @@ const Navbar = () => {
                     <p className='text-gray-800 hover:text-blue-400'>Dashboard </p>
                 </Link>
                 <Link href="/CreateCampaign" className=" rounded-full cursor-pointer py-2 px-2 ml-2 ">
-                    <p className='text-gray-800 hover:text-blue-400'>NewCampaign </p>
+                    <p className='text-gray-800 hover:text-blue-400'>Create</p>
                 </Link>
-                <Link href="/MyCampaign" className=" rounded-full cursor-pointer py-2 px-2 ml-2 ">
+                <Link href="/Mycampaigns" className=" rounded-full cursor-pointer py-2 px-2 ml-2 ">
                     <p className='text-gray-800 hover:text-blue-400'>MyCampaigns </p>
                 </Link>
-
-                <span className="text-gray-800 cursor-pointer py-2 px-2 ml-2 hover:text-blue-400 rounded-full">
-                    <p>Logout</p>
-                </span>
 
             </div>
             <span className="hover:text-white cursor-pointer flex items-center relative float-right mr-3">

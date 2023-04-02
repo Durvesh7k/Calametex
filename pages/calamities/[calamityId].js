@@ -85,13 +85,7 @@ export default function Calamity() {
 
     return (
         <>
-            <div className='min-h-screen max-w-screen home-bg text-gray-800 font-semibold'>
-                {/* Navbar */}
-                <div className="container mx-auto py-3">
-                    <Navbar />
-                </div>
-
-                {/* List Grid */}
+            <div className='min-h-screen max-w-screen  text-gray-800 font-semibold'>
                 <div className='px-4 container  mx-auto'>
 
                     <h2 className="text-2xl font-bold mt-8 mb-4 text-center text-gray-700">Campaign - {campaignObj.title} </h2>
