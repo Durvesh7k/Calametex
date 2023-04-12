@@ -89,7 +89,7 @@ export default function Home() {
                                                             }
                                                         }}
                                                         >
-                                                            <Card data={calamity} />
+                                                            <Card data={calamity} mounted={mounted} />
                                                         </Link>
                                                     </div>
                                                 )

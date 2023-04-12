@@ -1,4 +1,8 @@
-export default function Card({ data }) {
+import { useState } from "react"
+
+export default function Card({ data, mounted }) {
+	const [calamity, setCalamity]  = useState(mounted && data);
+
 
 	return (
 		<div className="relative mx-auto w-full cursor-pointer">
@@ -6,8 +10,8 @@ export default function Card({ data }) {
 				<div className="shadow p-4 rounded-lg bg-white">
 					<div className="flex justify-center relative rounded-lg overflow-hidden h-52">
 						<div className="transition-transform duration-500 transform ease-in-out hover:scale-110 w-full">
-							<img src={data.image != null ? (
-                                data.image
+							<img src={calamity.image != null ? (
+                                calamity.image
 							) : (
 								"https://static.vecteezy.com/system/resources/previews/001/843/828/non_2x/donate-money-for-charity-design-illustration-isolated-on-white-background-free-vector.jpg"
 							)} className='border-r-2 ' alt="Images" />
@@ -16,7 +20,7 @@ export default function Card({ data }) {
 						<div className="absolute flex justify-center bottom-0 mb-3">
 							<div className="flex bg-white px-4 py-1 space-x-5 rounded-lg overflow-hidden shadow">
 								<p className="flex items-center font-medium text-gray-800">
-									{data.target.toString()}
+									{calamity.target.toString()}
 								</p>
 							</div>
 						</div>
@@ -28,10 +32,10 @@ export default function Card({ data }) {
 
 					<div className="mt-4">
 						<h2 className="font-medium text-base md:text-lg text-gray-800 line-clamp-1" title="New York">
-							{data.title}
+							{calamity.title}
 						</h2>
 						<p className="mt-2 text-sm text-gray-800 line-clamp-1" title="New York, NY 10004, United States">
-							{data.description.slice(0, 150)}
+							{calamity.description.slice(0, 150)}
 						</p>
 					</div>
 				</div>

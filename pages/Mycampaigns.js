@@ -95,7 +95,7 @@ export default function Mycampaign() {
                                                             }
                                                         }}
                                                         >
-                                                            <Card data={calamity} />
+                                                            <Card data={calamity} mounted={mounted} />
                                                         </Link>
                                                     </div>
                                                 )
