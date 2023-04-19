@@ -1,11 +1,10 @@
 import { useState, useEffect } from 'react'
-import Navbar from './components/Navbar'
+import Navbar from '../components/Navbar'
 import { useStateContext } from './context'
 import { ethers } from 'ethers'
 import { useRouter } from 'next/router'
 import useIsMounted from './hooks/useIsMounted';
-import Loading from './components/Loading';
-
+import { Loading } from '@/components'
 
 const CreateCampaign = () => {
 

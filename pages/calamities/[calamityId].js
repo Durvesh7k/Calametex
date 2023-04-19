@@ -1,6 +1,6 @@
 import { useRouter } from "next/router"
 import { useState, useEffect } from "react";
-import Navbar from '../components/Navbar'
+import Navbar from '../../components/Navbar'
 import Image from "next/image";
 import { useStateContext } from "../context";
 import { ethers } from "ethers";

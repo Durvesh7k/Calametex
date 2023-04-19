@@ -1,12 +1,10 @@
 import Link from 'next/link';
-import Card from './components/Card';
-import Navbar from './components/Navbar';
 import { useStateContext } from './context';
 import { useState, useEffect } from 'react';
 import { ethers } from 'ethers';
 import { Router, useRouter } from 'next/router';
 import useIsMounted from './hooks/useIsMounted';
-import Loading from './components/Loading';
+import {Loading, Card} from '@/components';
 
 export default function Home() {
     const { contractABI, crowdFundAddress, address, isConnected } = useStateContext();
