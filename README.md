@@ -76,6 +76,3 @@ Feel free to fork the repository and create a pull request with your enhancement
 ## License
 This project is licensed under the MIT License.
 
-## Contact
-For any queries or collaborations, reach out at [your email or LinkedIn].
-
