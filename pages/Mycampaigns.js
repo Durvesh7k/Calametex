@@ -25,6 +25,8 @@ export default function Mycampaign() {
                     signer
                 )
 
+                console.log(signer);
+
                 const campaigns = await contract.getCampaigns();
                 let campaignClean = [];
                 campaigns.forEach((calamity, i) => {
@@ -54,15 +56,14 @@ export default function Mycampaign() {
             console.log(e);
         }
     }
-    useEffect(() => {
-        getAllCampaigns();
+    // useEffect(() => {
+    //     getAllCampaigns();
 
-    }, [])
+    // }, [])
 
-    useEffect(() => {
-        console.log(campaigns)
-    }, [campaigns])
-
+    // useEffect(() => {
+    //     console.log(campaigns)
+    // }, [campaigns])
 
 
 

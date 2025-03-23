@@ -61,15 +61,12 @@ const CreateCampaign = () => {
         e.preventDefault();
         try {
             await publishCampaign(data);
-            alert("Succefully created a campaign")
+            alert("Successfully created a campaign");
+            router.push('/')
         } catch (e) {
             console.log(e);
         }
     }
-
-
-
-
 
 
 

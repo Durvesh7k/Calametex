@@ -3,8 +3,7 @@ import { useAccount, useNetwork} from 'wagmi';
 import { ethers } from 'ethers';
 import { EditionMetadataWithOwnerOutputSchema } from '@thirdweb-dev/sdk';
 import abi from '../contractsData/CrowdFunding.json'
-import mumbaiContract from "../contractsData/CrowdFunding-mumbai-address.json";
-import filecoinContract from "../contractsData/CrowdFunding-Filecoin.json";
+import mumbaiContract from "../contractsData/CrowdFunding-sepolia-address.json";
 
 
 
@@ -16,9 +15,6 @@ const StateContextProvider = ({ children }) => {
     const contractABI = abi.abi;
     const crowdFundAddress = mumbaiContract.address
     const {address, isConnected} = useAccount();
-    const { chain, chains } = useNetwork();
-
-
 
     return (
         <StateContext.Provider
